@@ -50,13 +50,17 @@ void loop(){
   if(distance<50) {
     digitalWrite(led,HIGH);
     tone(speaker, 1000,1000);
-    delay(500);
+    digitalWrite(led,LOW);
+    delay(distance*10);
     tone(speaker, 1500,1000);
-    delay(500);
+    digitalWrite(led,HIGH);
+    delay(distance*10);
     tone(speaker, 1000,1000);
-    delay(500);
+    digitalWrite(led,LOW);
+    delay(distance*10);
     tone(speaker, 1500,1000);
-    delay(500);
+    digitalWrite(led,HIGH);
+    delay(distance*10);
     
     //delayMicroseconds(10);
   } 
@@ -66,4 +70,6 @@ void loop(){
 
   Serial.print("Distance : ");
   Serial.println(distance);
+  Serial.print("Delay: ");
+  Serial.print(distance*10);
 }
