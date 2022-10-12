@@ -10,7 +10,6 @@ const int speaker = 3;
 // LED + - 10
 // LED - = GND
 
-
 long duration;
 long distance;
 
@@ -32,9 +31,6 @@ void loop(){
 
   duration = pulseIn(echoPin, HIGH);
   distance = duration*0.034/2;
-
-
-
 
   if(distance<10) {
     digitalWrite(led,HIGH);
@@ -71,5 +67,5 @@ void loop(){
   Serial.print("Distance : ");
   Serial.println(distance);
   Serial.print("Delay: ");
-  Serial.print(distance*10);
+  Serial.println(distance*10);
 }
